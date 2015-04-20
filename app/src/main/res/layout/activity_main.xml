@@ -3,9 +3,59 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#c1c2c3"
+    tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <WebView
+        android:id="@+id/mainWeb"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="3dp"
 
+        >
+
+        </WebView>
+
+    <View android:layout_width="match_parent"
+        android:id="@+id/line"
+        android:layout_height="4dp"
+        android:layout_below="@+id/mainWeb"
+        android:background="@drawable/razdelitel"/>
+
+
+    <GridLayout
+        android:id="@+id/mainGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:columnCount="3"
+        >
+        <Button android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:singleLine="true"
+            android:layout_margin="2dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/main_button"
+            android:text="ИГ-1-11"></Button>
+        <Button android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:singleLine="true"
+            android:layout_margin="2dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/main_button"
+            android:text="ИГ-1-12"></Button>
+        <Button android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:singleLine="true"
+            android:layout_margin="2dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/main_button"
+            android:text="ИГ-1-13"></Button>
+    </GridLayout>
 </RelativeLayout>
