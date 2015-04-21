@@ -35,6 +35,17 @@
         android:paddingRight="3dp"
         android:columnCount="3"
         >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="3">
+            <Button
+                android:id="@+id/moreNews"
+                android:layout_gravity="right"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/more_news"/>
+        </LinearLayout>
         <!--<Button android:layout_width="100dp"-->
             <!--android:layout_height="100dp"-->
             <!--android:singleLine="true"-->
@@ -57,4 +68,6 @@
             <!--android:background="@drawable/main_button"-->
             <!--android:text="ИГ-1-13"></Button>-->
     </GridLayout>
+
+
 </RelativeLayout>

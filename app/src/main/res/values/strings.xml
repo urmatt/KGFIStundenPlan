@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">KGFI Stundenplan</string>
+    <string name="app_name">My KGFI</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="more_news">Больше новостей</string>
 </resources>

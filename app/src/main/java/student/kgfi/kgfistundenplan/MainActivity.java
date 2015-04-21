@@ -40,7 +40,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         gLayout = (GridLayout) findViewById(R.id.mainGrid);
         mainWeb = (WebView) findViewById(R.id.mainWeb);
-        mainWeb.loadUrl("http://kgfi.ksucta.kg/index.php/ru/news");
+        mainWeb.loadUrl("http://urmapps.esy.es/mykgfi/getNews.php?group=IG-1-11&news_count=2");
         displayMetrics = getResources().getDisplayMetrics();
         new LoadCategories().execute();
 
