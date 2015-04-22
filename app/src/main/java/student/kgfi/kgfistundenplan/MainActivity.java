@@ -1,7 +1,7 @@
 package student.kgfi.kgfistundenplan;
 
 import android.app.ProgressDialog;
-import android.content.res.Configuration;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -10,10 +10,10 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebView;
 import android.widget.GridLayout;
 import android.widget.Button;
-import android.graphics.drawable.Drawable;
 
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
@@ -25,12 +25,13 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements View.OnClickListener{
 
 
     GridLayout gLayout;
     ArrayList<String> list = new ArrayList<>();
     HashMap<Integer, Button> buttonsMap = new HashMap<Integer, Button>();
+    Button moreNewsButton;
     DisplayMetrics displayMetrics = null;
     WebView mainWeb;
 
@@ -40,6 +41,8 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         gLayout = (GridLayout) findViewById(R.id.mainGrid);
         mainWeb = (WebView) findViewById(R.id.mainWeb);
+        moreNewsButton = (Button) findViewById(R.id.moreNewsButton);
+        moreNewsButton.setOnClickListener(this);
         mainWeb.loadUrl("http://urmapps.esy.es/mykgfi/getNews.php?group=IG-1-11&news_count=2");
         displayMetrics = getResources().getDisplayMetrics();
         new LoadCategories().execute();
@@ -55,7 +58,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -67,6 +70,15 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        if(id == R.id.moreNewsButton){
+            Intent in = new Intent(MainActivity.this, MoreNewsActivity.class);
+            this.startActivity(in);
+        }
     }
 
     class LoadCategories extends AsyncTask<String, String, String> {
