@@ -1,7 +1,15 @@
 <resources>
     <string name="app_name">My KGFI</string>
+    <string name="title_activity_settings">Настройки</string>
+    <string name="ru_about">О приложении</string>
+    <string name="ru_help">Справка</string>
+    <string name="ru_more_news">Больше новостей</string>
+    <string name="ru_volume">Звук оповешения</string>
+    <string name="ru_my_group">Моя группа:</string>
+    <string name="ru_only_my_group">При запуске открывать страницу моей группы</string>
+    <string name="ru_yes">да</string>
+    <string name="ru_language">Язык</string>
+    <string name="ru_save">Сохранить</string>
+    <string name="ru_back">Назад</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="more_news">Больше новостей</string>
 </resources>

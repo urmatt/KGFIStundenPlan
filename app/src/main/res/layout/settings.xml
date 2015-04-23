@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ru_volume"
+        android:id="@+id/textView"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:autoText="false"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textSize="12pt"
+        android:textColor="#ff000000" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:progress="50" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ru_my_group"
+        android:id="@+id/textView2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:autoText="false"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textSize="12pt"
+        android:textColor="#FF000000" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerMyGroup"
+        android:layout_gravity="left" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ru_only_my_group"
+        android:id="@+id/textView3"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:autoText="false"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textSize="10pt"
+        android:textColor="#FF000000" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ru_yes"
+        android:id="@+id/checkBox" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ru_language"
+        android:id="@+id/textView4"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:autoText="false"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textSize="10pt"
+        android:textColor="#FF000000" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerLanguages"
+        android:layout_gravity="left" />
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/Widget.AppCompat.Button"
+        android:text="@string/ru_save"/>
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/Widget.AppCompat.Button"
+        android:text="@string/ru_back"/>
+
+</LinearLayout>

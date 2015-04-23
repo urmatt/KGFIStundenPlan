@@ -12,8 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
-import android.widget.GridLayout;
 import android.widget.Button;
+import android.widget.GridLayout;
 
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
@@ -43,7 +43,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         mainWeb = (WebView) findViewById(R.id.mainWeb);
         moreNewsButton = (Button) findViewById(R.id.moreNewsButton);
         moreNewsButton.setOnClickListener(this);
-        mainWeb.loadUrl("http://urmapps.esy.es/mykgfi/getNews.php?group=IG-1-11&news_count=2");
+        mainWeb.loadUrl("http://urmapps.esy.es/mykgfi/getNews.php?group=all&news_count=1");
         displayMetrics = getResources().getDisplayMetrics();
         new LoadCategories().execute();
 
@@ -66,7 +66,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent settings = new Intent(this, SettingsActivity.class);
+            startActivity(settings);
         }
 
         return super.onOptionsItemSelected(item);
